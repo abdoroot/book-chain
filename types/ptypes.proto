@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package ="github.com/abdoroot/book-chain/types";
+
+message Block{
+    Header header = 1;
+    repeated Transaction transaction = 2;
+}
+
+message Header{
+    int32 version = 1;
+    int32 heights = 2; //block index or id
+    bytes prevHash = 3;
+    bytes rootHash = 4; //merkle root
+    int64 timestamp = 5; 
+}
+
+message Transaction{
+
+}
